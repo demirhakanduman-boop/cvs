@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Monterey:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Monterey', serif;
+    background-color: #2a2b30;
+    color: #f8f7f5;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding: 24px 0 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0;
+}
+
+.display-area {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(42, 43, 48, 0.08);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    order: 2;
+}
+
+.album-display {
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.album-display.artist {
+    font-size: 24px;
+    font-weight: 700;
+    color: #d18271;
+    margin-bottom: 12px;
+}
+
+.album-display.title {
+    font-size: 18px;
+    color: #2a2b30;
+    margin-bottom: 16px;
+}
+
+.album-display.genre {
+    font-size: 12px;
+    color: #2a2b30;
+    font-weight: 600;
+    background-color: #eac089;
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.placeholder {
+    font-size: 14px;
+    color: #bbb;
+    font-style: italic;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 16px 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(42, 43, 48, 0.1);
+}
+
+.btn-primary {
+    background-color: #d18271;
+    color: white;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px rgba(42, 43, 48, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #c46c63;
+    box-shadow: 0 4px 12px rgba(209, 130, 113, 0.3);
+}
+
+.btn-random {
+    background-color: #eac089;
+    color: #2a2b30;
+    font-weight: 700;
+    grid-column: 1 / -1;
+}
+
+.btn-random:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px rgba(42, 43, 48, 0.2);
+}
+
+.btn-random:hover {
+    background-color: #d9a574;
+    box-shadow: 0 4px 12px rgba(234, 192, 137, 0.3);
+}
+
+.btn-text {
+    font-size: 13px;
+}
+
+.album-list {
+    background: white;
+    border-radius: 12px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(42, 43, 48, 0.08);
+    width: 100%;
+    max-width: 420px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: none;
+    order: 3;
+}
+
+.album-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: default;
+    transition: background-color 0.2s ease;
+}
+
+.album-item:hover {
+    background-color: #fafaf8;
+}
+
+.album-item:last-child {
+    border-bottom: none;
+}
+
+.album-item-text {
+    flex: 1;
+}
+
+.album-item-artist {
+    font-size: 13px;
+    color: #8b8c8f;
+    margin-bottom: 4px;
+}
+
+.album-item-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2a2b30;
+}
+
+.list-header {
+    padding: 16px;
+    background-color: #f8f7f5;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    display: none;
+}
+
+.list-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #d18271;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .display-area {
+        min-height: 120px;
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 18px 12px;
+    }
+}

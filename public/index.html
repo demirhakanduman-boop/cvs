@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cebat Vinyl Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cebat Vinyl Selector</h1>
+        </header>
+
+        <div class="display-area">
+            <div class="album-display" id="albumDisplay">
+                <p class="placeholder">Select a category</p>
+            </div>
+        </div>
+
+        <div class="buttons-grid">
+            <button class="btn btn-primary" onclick="showCategory('international')">
+                <span class="btn-text">International</span>
+            </button>
+            <button class="btn btn-primary" onclick="showCategory('turkey')">
+                <span class="btn-text">Turkey</span>
+            </button>
+            <button class="btn btn-primary" onclick="showCategory('jazz')">
+                <span class="btn-text">Jazz</span>
+            </button>
+            <button class="btn btn-primary" onclick="showCategory('classical-ost')">
+                <span class="btn-text">Classical / OST</span>
+            </button>
+            <button class="btn btn-random" onclick="randomAlbum()">
+                <span class="btn-text">Random Album</span>
+            </button>
+        </div>
+
+        <div class="album-list" id="albumList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "album-selector",
+  "version": "1.0.0",
+  "description": "Cebat album selector app",
+  "scripts": {
+    "dev": "npx http-server -p 3000",
+    "build": "echo 'Build complete'",
+    "start": "npx http-server"
+  },
+  "keywords": ["album", "music", "selector"],
+  "author": "",
+  "license": "MIT"
+}
